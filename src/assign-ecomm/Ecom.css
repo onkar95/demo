@@ -1,0 +1,93 @@
+table,
+tr,
+td {
+  border: 1px solid black;
+
+  padding: 0 12px;
+
+}
+
+td,
+th {
+  text-align: center;
+  width: 10%;
+  padding: 2px 0;
+}
+
+.pageTable {
+  width: 90%;
+  margin: 0 10px;
+  bottom: 1px solid black;
+}
+
+.pagination {
+  display: flex;
+  margin: 20px;
+  padding: 10px;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.pagination button {
+  margin: 2px;
+}
+
+.thanku {
+  text-align: center;
+}
+
+.cartpage {
+  width: 100%;
+  display: flex !important;
+  margin: 20px;
+  flex-wrap: wrap;
+}
+
+.carttable {
+  width: 70% !important;
+  border: 1px solid black;
+  margin: 2px 15px;
+  padding: 5px
+}
+
+.cart {
+  border: 1px solid black;
+  margin: 0px 30px;
+  padding: 25px;
+  height: max-content
+}
+
+.searchfilter {
+  width: 90%;
+  display: flex;
+  padding: 15px 50px;
+  justify-Content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.selectop {
+  min-width: max-content;
+  width: 10%;
+  display: flex;
+  margin: 0
+}
+
+.search {
+  min-width: max-content;
+  Width: 30%;
+  display: flex;
+  flex-Direction: row;
+  margin: 2px;
+}
+
+.addtoc {
+  min-width: max-content;
+  display: flex;
+  flex-Direction: row;
+  align-items: flex-end;
+}
+.addtoc button{
+  width: 100%;
+}
