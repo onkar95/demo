@@ -9,8 +9,14 @@ const Cart = () => {
 
 
   const [Total, setTotal] = useState(0);
+  const CalcTotal = () => {
+    let v = 0;
+    CartData.map((val) => (
+      v += val.Qty * val.price
+    ))
+    setTotal(v)
+  }
   const increment = (id) => {
-
     const FData = CartData.map((val) => {
       if (val.id === id && val.Qty < 5) {
         const v = val.Qty + 1
@@ -36,15 +42,16 @@ const Cart = () => {
     setCartData(FData)
     CalcTotal()
   }
-  const CalcTotal = () => {
-    let v = 0;
-    CartData.map((val) => (
-      v += val.Qty * val.price
-    ))
-    setTotal(v)
-  }
+  
   useEffect(() => {
-    CalcTotal()
+    const CalcTotal = () => {
+      let v = 0;
+      CartData.map((val) => (
+        v += val.Qty * val.price
+      ))
+      setTotal(v)
+    }
+    CalcTotal();
   }, [CartData]);
 
   const handelRemove = (id) => {
