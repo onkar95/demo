@@ -8,9 +8,12 @@ const SearchFilter = () => {
     const navigate = useNavigate();
     const { Search } = Input;
 
+    const [typeVal, settypeVal] = useState("select");
+    const [SizeVal, setSizeVal] = useState("select");
     const [searchvalue, setsearchvalue] = useState();
     const [message, setmessage] = useState(false);
     const [Type, setType] = useState(FilterData);
+
 
     function findInValues(arr, val) {
         const value = String(val).toLowerCase();
@@ -22,21 +25,25 @@ const SearchFilter = () => {
     }
 
     const handelTypeFilter = (arr, val) => {
+        settypeVal(val)
         const filter = arr?.filter(o => o.type.includes(val))
         setType(()=>filter)
         setFilterData(()=>filter)
     }
     const handelSizeFilter = (arr, val) => {
+        setSizeVal(val)
         const sfilter = arr.filter(o => o.size.includes(val))
         setFilterData(()=>sfilter)
     }
-   
+
 
     const handelReset = (e) => {
         setmessage(false)
         setFilterData(Data)
         setType(Data)
         setsearchvalue("")
+        settypeVal("select")
+        setSizeVal("select")
     }
     const AddToCheckout = () => {
         return navigate('/cart')
@@ -48,13 +55,13 @@ const SearchFilter = () => {
             <Form className='searchfilter'>
                 <div className='selectop'>
                     <Form.Item  >
-                        <Select placeholder='select' onChange={(e) =>  handelTypeFilter(Data, e)} >
+                        <Select placeholder='select' value={typeVal} onChange={(e) =>  handelTypeFilter(Data, e)} >
                             <Select.Option value="hoodie" >hoodie</Select.Option>
                             <Select.Option value="shirt" >shirt</Select.Option>
                         </Select>
                     </Form.Item>
                     <Form.Item  >
-                        <Select placeholder='size' onChange={(e) => {handelSizeFilter(Type, e)}}>
+                        <Select placeholder='size'  value={SizeVal} onChange={(e) => {handelSizeFilter(Type, e)}}>
                             <Select.Option value="s">s</Select.Option>
                             <Select.Option value="m">m</Select.Option>
                             <Select.Option value="l">l</Select.Option>
