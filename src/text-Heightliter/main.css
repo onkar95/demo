@@ -1,0 +1,96 @@
+.main {
+    display: flex;
+    width: 100%;
+    /* flex-wrap: wrap; */
+}
+
+.records {
+    /* padding: 50px; */
+    margin: 2px 5px;
+    min-width: max-content;
+    border: 1px solid black;
+}
+
+.text {
+    margin: 2px 5px;
+    /* max-width: 100%; */
+    width: 100%;
+    border: 1px solid black;
+    height: 500px;
+
+}
+
+.textHeiglighter {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+
+.annotations {
+    margin: 2px 5px;
+    width: 25%;
+    border: 1px solid black;
+}
+
+.annotationsTable {
+    padding: 5px;
+}
+
+.RecordList {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    font-size: large;
+    cursor: pointer;
+}
+
+.hamburger {
+    /* min-width: 100%; */
+    display: flex;
+    justify-content: space-around;
+    background-color: #683fa6;
+}
+
+.hamburger h1 {
+    color: white;
+    text-align: center;
+
+}
+
+.closed {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #683fa6;
+    /* width: 30%; */
+}
+
+.hamburgerButton {
+    background-color: white;
+    cursor: pointer;
+    justify-content: flex-end;
+    border: none;
+    width: 20px;
+    height: 50px;
+    align-self: center;
+    color: black;
+    font-size: larger;
+}
+
+.filterTags {
+    display: flex;
+    justify-content: flex-start;
+    background-color: #683fa6;
+}
+
+.filterTags button {
+    margin: 0 3px;
+    color: white;
+    border: 1px solid white;
+    background-color: transparent;
+}
+
+.filterTags button:focus {
+    background-color: white;
+    color: #683fa6;
+}
