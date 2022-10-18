@@ -1,4 +1,9 @@
 # Getting Started with Create React App
+There are 3 assignments combined currently 
+
+1.e-commerce
+2.count-down
+3.Text-heighliter
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
