@@ -6,7 +6,7 @@ const Annotations = () => {
     const { setData, sideRecord2, setsideRecord2, AData, setAData } = useContext(DataContext)
     const [AnnotationData, setAnnotationData] = useState(AData);
     const hadelDelete = (val) => {
-        if (window.confirm("relly")) {
+        if (window.confirm("Do you want to Delete")) {
             const deleteD = AData?.filter((key) => {
                 return key.text != val
             });
